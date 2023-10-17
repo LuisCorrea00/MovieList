@@ -5,6 +5,7 @@ import { Autoplay } from 'swiper/modules'
 import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css';
 import {BsInfoCircleFill} from 'react-icons/bs'
+import 'dotenv/config'
 
 function MovieCarousel() {
   const imagePath = "https://image.tmdb.org/t/p/w1280";

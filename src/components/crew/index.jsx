@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Crew(props) {
   return (
       <div className="mt-5 row">
@@ -17,6 +18,7 @@ function Crew(props) {
             <div className="col-6">
                 <h3 className="mb-4">Roteiristas</h3>
                 {props.movie.credits &&
+                // eslint-disable-next-line
                     props.movie.credits.crew.map((crew, index) => {
                     if (crew.job === 'Writer') {
                         return (
@@ -32,6 +34,7 @@ function Crew(props) {
             <div className="col-6">
                 <h3 className="mb-4">Produtores</h3>
                 {props.movie.credits &&
+                // eslint-disable-next-line
                     props.movie.credits.crew.map((crew, index) => {
                     if (crew.job === 'Executive Producer') {
                         return (
@@ -55,6 +58,7 @@ function Crew(props) {
             <div className="col-6">
                 <h3 className="mb-4">Diretores</h3>
                 {props.movie.credits &&
+                // eslint-disable-next-line
                     props.movie.credits.crew.map((crew, index) => {
                     if (crew.job === 'Director') {
                         return (

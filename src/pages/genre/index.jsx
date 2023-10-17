@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles.css";
-
+import 'dotenv/config'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -21,6 +21,7 @@ export default function Genre() {
         .then((response) => response.json())
         .then((data) => {
             data.genres.forEach((genre) => {
+                // eslint-disable-next-line
                 if (genre.id == id) {
                 setGenero(genre.name);
                 console.log(genero);
