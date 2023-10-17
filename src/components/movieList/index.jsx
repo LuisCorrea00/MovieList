@@ -43,13 +43,13 @@ function MovieList(props) {
                 <SwiperSlide key={index}>
                   <div className='d-flex align-items-center'>
                     { props.numbers && 
-                      <h2 className='me-3' style={{fontFamily:'Londrina Shadow', fontSize:'3rem'}}>{index+1}</h2> 
+                      <h2 className='me-3' style={{fontFamily:'Londrina Shadow', fontSize:'4rem'}}>{index+1}</h2> 
                     }
                     <Link to={`/${movie.id}`}>
                       <img
                         src={`${imagePath}${movie.poster_path}`}
                         alt={movie.title}
-                        className='w-100 foto '
+                        className='w-100 imgItem '
                       />
                     </Link>
                   </div>

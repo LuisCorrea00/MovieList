@@ -40,8 +40,8 @@ export default function Genre() {
 
     return (
         <div>
-            <div style={{ padding: '2rem' }} className='d-flex  align-items-center'>
-                <h1 className='my-5 me-5'>{genero}</h1>
+            <div style={{ padding: '2rem' }} className='d-flex align-items-center'>
+                <h1 className='my-3 me-5'>{genero}</h1>
                 <button onClick={handleDestaques} className={`me-2 btn btn-sm ${destaques ? 'selected' : 'btn-dark'}`}>Destaques</button>
                 <button onClick={handleSeeAll} className={`ms-2 btn btn-sm ${seeAll ? 'selected' : 'btn-dark'}`}>Ver todos</button>
             </div>
@@ -55,11 +55,12 @@ export default function Genre() {
                     <div style={{ padding: '2rem' }}>
                         <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=popularity.desc&with_genres=${id}`} title={'Populares no momento'} limite={10}/>
 
-                        <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=vote_count.desc&with_genres=${id}`} title={'Clássicos'} limite={10}/>
-
                         <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=revenue.desc&with_genres=${id}`} title={'Recordistas de bilheteria'} limite={10}/>
 
-                        <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=vote_count.desc&with_genres=${id}&with_original_language=pt`} title={'Do Brasil para o brasileiro'} limite={10}/>                
+                        <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=vote_count.desc&with_genres=${id}&with_original_language=pt`} title={'Do Brasil para o brasileiro'} limite={10}/>   
+
+                        <MovieList url={`${URL}&include_adult=false&include_video=false&language=pt-BR&page=1&sort_by=vote_count.desc&with_genres=${id}`} title={'Clássicos'} limite={10}/>
+
                     </div>
                 )
             }

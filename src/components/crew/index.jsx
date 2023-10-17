@@ -14,22 +14,6 @@ function Crew(props) {
                     </div>
                     ))}
             </div>
-  
-            <div className="col-6">
-                <h3 className="mb-4">Roteiristas</h3>
-                {props.movie.credits &&
-                // eslint-disable-next-line
-                    props.movie.credits.crew.map((crew, index) => {
-                    if (crew.job === 'Writer') {
-                        return (
-                        <div key={index} className="d-flex justify-content-between">
-                            <p>Roteirista</p>
-                            <p>{crew.name}</p>
-                        </div>
-                        );
-                    }
-                })}
-            </div>
 
             <div className="col-6">
                 <h3 className="mb-4">Produtores</h3>
@@ -52,6 +36,23 @@ function Crew(props) {
                             </div>
                         );
                     }
+                })}
+            </div>
+
+            <div className="col-6">
+                <h3 className="mb-4">Roteiristas</h3>
+                {props.movie.credits &&
+                // eslint-disable-next-line
+                    props.movie.credits.crew.map((crew, index) => {
+                    if (crew.job === 'Writer') {
+                        return (
+                        <div key={index} className="d-flex justify-content-between">
+                            <p>Roteirista</p>
+                            <p>{crew.name}</p>
+                        </div>
+                        );
+                    }
+                    
                 })}
             </div>
 

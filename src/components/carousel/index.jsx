@@ -13,11 +13,12 @@ function MovieCarousel() {
   const KEY = process.env.REACT_APP_KEY;
 
   useEffect(() => {
-    fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=pt-BR`)
+    fetch(`https://api.themoviedb.org/3/movie/popular?language=pt-BR&api_key=${KEY}`)
       .then((response) => response.json())
       .then((data) => {
-        setMovies(data.results.slice(3, 8));
+        setMovies(data.results.slice(0, 6));
       });
+      
   }, [KEY]);
 
   return (
