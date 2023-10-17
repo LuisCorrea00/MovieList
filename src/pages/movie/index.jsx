@@ -4,7 +4,6 @@ import { BsFillStarFill, BsFillPlayCircleFill } from "react-icons/bs";
 import { GoAlertFill } from "react-icons/go"
 import MovieList from "../../components/movieList";
 import Crew from "../../components/crew";
-import 'dotenv/config'
 
 const Movie = () => {
   const { id } = useParams();

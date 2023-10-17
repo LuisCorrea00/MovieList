@@ -1,6 +1,5 @@
 import React from 'react'
 import "./styles.css";
-import 'dotenv/config'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 

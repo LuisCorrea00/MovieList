@@ -1,6 +1,5 @@
 import MovieCarousel from "../../components/carousel";
 import MovieList from "../../components/movieList";
-import 'dotenv/config'
 
 function Home() {
 

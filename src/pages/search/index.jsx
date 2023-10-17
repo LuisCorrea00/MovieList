@@ -1,6 +1,5 @@
 import React from 'react'
 import { useEffect, useState } from "react";
-import 'dotenv/config'
 import { BsSearch } from 'react-icons/bs'
 
 function Search() {
@@ -29,7 +28,8 @@ function Search() {
             type="text"
             className="form-control"
             placeholder="O que você está procurando?"
-            value={search}
+            // value={search}
+            // onChange={search}
           />
         </form>
       </div>
