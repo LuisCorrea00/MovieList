@@ -1,0 +1,9 @@
+.imgItem{
+    width: 180px;
+    border-radius: 1rem;
+    transition: all 0.3s;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
