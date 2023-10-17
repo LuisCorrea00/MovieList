@@ -6,6 +6,7 @@ import {Swiper, SwiperSlide} from 'swiper/react'
 import 'swiper/css';
 import {BsInfoCircleFill} from 'react-icons/bs'
 
+
 function MovieCarousel() {
   const imagePath = "https://image.tmdb.org/t/p/w1280";
   const [movies, setMovies] = useState([]);
