@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #14181C;
+  background:#14181c url(../public/content-bg.png) 0 -1px repeat-x;
   color: white;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

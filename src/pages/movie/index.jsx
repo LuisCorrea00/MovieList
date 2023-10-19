@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { BsFillStarFill, BsFillPlayCircleFill } from "react-icons/bs";
 import { GoAlertFill } from "react-icons/go"
 import MovieList from "../../components/movieList";
 import Crew from "../../components/crew";
+import WatchProviders from "../../components/watchProviders/WatchProviders";
 
 const Movie = () => {
   const { id } = useParams();
   const imagePath = "https://image.tmdb.org/t/p/w500";
   const [trailer, setTrailer] = useState([]);
   const [movie, setMovie] = useState([]);
+  const [flatrate, setFlatrate] = useState([]);
+  const [buy, setBuy] = useState([]);
+  const [rent, setRent] = useState([]);
+
+
   const KEY = process.env.REACT_APP_KEY;
 
   useEffect(() => {
@@ -29,6 +35,7 @@ const Movie = () => {
         }
       });
   }, [KEY, id, trailer]);
+
 
   return (
     <div className="container p-4">
@@ -54,7 +61,7 @@ const Movie = () => {
           </div>
           <div className="my-4 fs-5">
             <p>{movie.overview}</p>
-          </div>
+          </div>        
           <div className="">
             {trailer ? (
               <a
@@ -70,6 +77,9 @@ const Movie = () => {
                     <span className="ms-3">Trailer indisponível</span>
                 </div>
             )}
+          </div>
+          <div>
+            <WatchProviders url={`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${KEY}`}/>
           </div>
         </div>
       </div>

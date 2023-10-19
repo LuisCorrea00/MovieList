@@ -7,6 +7,7 @@ export const HeaderContainer = styled.header`
   padding: 20px;
   background-color: #1E1E1E;
   color: #fff;
+  height: 15vh;
 `;
 
 export const Title = styled.h1`

@@ -1,11 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
 import "./styles.css";
+import 'swiper/css/navigation';
+
 import { useEffect, useState } from "react";
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-router-dom';
 import { Swiper,SwiperSlide } from 'swiper/react';
-import { FreeMode} from 'swiper/modules'
+import {  Navigation} from 'swiper/modules'
 
 
 function MovieList(props) {
@@ -34,16 +36,19 @@ function MovieList(props) {
         </div>
         <div className='d-flex align-items-center mt-3'>
             <Swiper
-              freeMode={true}
               slidesPerView={6}
               spaceBetween={30}
-              modules={[FreeMode]}
+              modules={[ Navigation]}
+              navigation={{  
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+              }}
             >
               {movies.slice(0, props.limite).map((movie, index) => (
                 <SwiperSlide key={index}>
                   <div className='d-flex align-items-center'>
                     { props.numbers && 
-                      <h2 className='me-3' style={{fontFamily:'Londrina Shadow', fontSize:'4rem'}}>{index+1}</h2> 
+                      <h2 className='me-2' style={{fontFamily:'Londrina Shadow', fontSize:'3rem'}}>{index+1}</h2> 
                     }
                     <Link to={`/${movie.id}`}>
                       <img
@@ -55,6 +60,8 @@ function MovieList(props) {
                   </div>
                 </SwiperSlide>
               ))}
+              <div className="swiper-button-next" style={{backgroundColor:'rgba(0, 0, 0, 0.5)', color:'#ff5753'}}></div>
+              <div className="swiper-button-prev" style={{backgroundColor:'rgba(0, 0, 0, 0.3)', color:'#ff5733'}}></div>
             </Swiper>
         </div>
     </div>

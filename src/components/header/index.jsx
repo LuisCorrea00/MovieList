@@ -7,8 +7,9 @@ function Header() {
 
     return (
         <HeaderContainer>
-            <Link to={'/'} className="text-decoration-none text-white">
-                <p className="ms-4" style={{fontFamily:'Kavoon', fontSize:'3rem'}}>MovieList</p>
+            <Link to={'/'} className="text-decoration-none text-white d-flex align-items-center">
+                <span className="ms-4" style={{fontFamily:'Kavoon', fontSize:'3rem'}}>MovieList</span>
+                <img src="/icon.png" alt="icon" className="ms-2 mt-1" style={{width:'3rem', height:'3rem'}}/>
             </Link>
             <Links>
                 <Link to={'/buscar'}>
